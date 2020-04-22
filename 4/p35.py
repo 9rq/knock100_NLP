@@ -2,12 +2,19 @@ from collections import Counter
 import p30
 
 
-lst = p30.read_mecab()
+def get_word_frequency(lst):
+    words = []
+    for sentence in lst:
+        for token in sentence:
+            words.append(token['surface'])
+    return Counter(words).most_common()
 
-words = []
-for sentence in lst:
-    for token in sentence:
-        words.append(token['surface'])
-ans = Counter(words).most_common()
-print(ans)
+def main():
+    lst = p30.read_mecab()
+    ans = get_word_frequency(lst)
 
+    print(ans)
+
+
+if __name__ == '__main__':
+    main()
