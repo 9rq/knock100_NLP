@@ -8,7 +8,6 @@ words = []
 for sentence in lst:
     for token in sentence:
         words.append(token['surface'])
-ans = list(Counter(words).items())
-ans.sort(key = lambda x:x[1], reverse = 1)
+ans = Counter(words).most_common()
 print(ans)
 
