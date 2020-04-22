@@ -14,10 +14,16 @@ def plot(count,labels,show_count):
     ax.bar(range(show_count), count, tick_label = labels)
     plt.show()
 
-lst = p30.read_mecab()
-lst = p35.get_word_frequency(lst)
-lst = lst[:show_count]
 
-labels,count = zip(*lst)
 
-plot(count,labels,10)
+
+
+def main():
+    lst = p30.read_mecab()
+    lst = p35.get_word_frequency(lst)
+    lst = lst[:show_count]
+    labels,count = zip(*lst)
+    plot(count,labels,10)
+
+if __name__ == '__main__':
+    main()
