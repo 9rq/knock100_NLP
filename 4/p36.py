@@ -9,15 +9,15 @@ rcParams['font.sans-serif'] = ['Hiragino Maru Gothic Pro', 'Yu Gothic', 'Meirio'
 show_count = 10
 
 
+def plot(count,labels,show_count):
+    fig, ax = plt.subplots()
+    ax.bar(range(show_count), count, tick_label = labels)
+    plt.show()
+
 lst = p30.read_mecab()
 lst = p35.get_word_frequency(lst)
 lst = lst[:show_count]
-x = range(show_count)
 
 labels,count = zip(*lst)
-print(labels, count)
 
-fig, ax = plt.subplots()
-ax.bar(x, count, tick_label = labels)
-# ax.set_xticklabels(labels)
-plt.show()
+plot(count,labels,10)
