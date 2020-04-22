@@ -6,7 +6,8 @@ def get_word_frequency(lst):
     words = []
     for sentence in lst:
         for token in sentence:
-            words.append(token['surface'])
+            if token['pos'] == '名詞':
+                words.append(token['surface'])
     return Counter(words).most_common()
 
 def main():
