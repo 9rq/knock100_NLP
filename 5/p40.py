@@ -1,7 +1,7 @@
 from util import Morph
 
 
-def read_cabocha_morph(file_path = './neko.txt.cabocha'):
+def read_cabocha_morph(file_path = '../data/neko.txt.cabocha'):
     sentences = []
 
     with open(file_path, 'r') as f:
