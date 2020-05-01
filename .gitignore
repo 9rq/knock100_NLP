@@ -1,3 +1,4 @@
 *.txt
 neko.txt.mecab
 __pycache__
+data
