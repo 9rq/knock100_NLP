@@ -7,7 +7,7 @@ model = p60.read_vectors()
 ans = {}
 
 
-with open('./questions-words.txt', 'r') as f:
+with open('../data/questions-words.txt', 'r') as f:
 
     res = []
     for line in f:

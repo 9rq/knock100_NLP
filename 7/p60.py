@@ -1,7 +1,7 @@
 import gensim
 
 
-def read_vectors(file_path='./GoogleNews-vectors-negative300.bin'):
+def read_vectors(file_path='../data/GoogleNews-vectors-negative300.bin'):
     model = gensim.models.KeyedVectors.load_word2vec_format(file_path, binary=True)
     return model
 
