@@ -1,4 +1,4 @@
-def read_mecab(file_path='neko.txt.mecab'):
+def read_mecab(file_path='../data/neko.txt.mecab'):
     res = []
     with open (file_path, 'r') as f:
         sentence = []

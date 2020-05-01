@@ -1,7 +1,7 @@
 import MeCab
 
 
-file_path = 'neko.txt'
+file_path = '../data/neko.txt'
 output_path = file_path + '.mecab'
 
 mecab = MeCab.Tagger()
