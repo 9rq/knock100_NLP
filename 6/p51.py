@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
+import joblib
 
 
 publisher = ['Reuters', 'Huffington Post', 'Businessweek', 'Contactmusic.com', 'Daily Mail']
@@ -38,6 +39,8 @@ def func(train, test, valid):
     train.to_csv('../data/train.feature.txt', index = False)
     valid.to_csv('../data/valid.feature.txt', index = False)
     test.to_csv('../data/test.feature.txt', index = False)
+
+    joblib.dump(vectorizer.vocabulary_, './model/vocabulary.joblib')
 
 def main():
     train = read_data('../data/train.txt')
